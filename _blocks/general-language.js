@@ -230,7 +230,10 @@ function justForMakeAllLocal () {
         document.getElementById("menuMainA3").textContent = translations[lang].menuMainA3;
         [...]  */
 
-        checkMenu();
+        setTimeout(() => {
+          checkMenu();
+        }, 100);
+        
         updateTitleTab();
     }
 

@@ -77,8 +77,8 @@ const translations = {
 
     // Releases
     mainTitle: 'Releases',
-    mainDescription: 'Last release: August 27, 2025',
-    txt100date: "08/27/2025", 
+    mainDescription: 'Last release: August 28, 2025',
+    txt100date: "08/28/2025", 
     txtNoteDebut: "Debut release",
     txtNoteCurrent: "Current version",
     txt100t1: "Features",
@@ -140,8 +140,8 @@ const translations = {
 
     // Releases
     mainTitle: 'Lanzamientos',
-    mainDescription: 'Último lanzamiento: 27 de Agosto del 2025',
-    txt100date: "27/08/2025", 
+    mainDescription: 'Último lanzamiento: 28 de Agosto del 2025',
+    txt100date: "28/08/2025", 
     txtNoteDebut: "Lanzamiento Debut",
     txtNoteCurrent: "Versión actual",
     txt100t1: "Características",
@@ -202,8 +202,8 @@ const translations = {
 
     // Releases
     mainTitle: 'Lançamentos',
-    mainDescription: 'Último lançamento: 27 de Agosto de 2025',
-    txt100date: "27/08/2025", 
+    mainDescription: 'Último lançamento: 28 de Agosto de 2025',
+    txt100date: "28/08/2025", 
     txtNoteDebut: "Lançamento debut",
     txtNoteCurrent: "Versão atual",
     txt100t1: "Características",
@@ -264,7 +264,9 @@ function changeLanguage(langparameter) {
   });
 
   updateFlagImage(langparameter);
-  checkMenu();
+  setTimeout(() => {
+    checkMenu();
+  }, 100);
   updateTitleTab();
 }
 

@@ -249,7 +249,9 @@ function changeLanguage(langparameter) {
   document.getElementById("menuMainA3").textContent = translations[lang].menuMainA3;
   [...]  */
   updateTitleTab();
-  checkMenu();
+  setTimeout(() => {
+    checkMenu();
+  }, 100);
 }
 
 function changeLanguageNotation(langNotationparameter) {

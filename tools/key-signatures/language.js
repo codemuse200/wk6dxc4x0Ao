@@ -364,7 +364,9 @@ function changeLanguage(langparameter) {
   updateKeySignaturesLangSelected(element_keySignatures_selected);
 
   updateFlagImage(langparameter);
-  checkMenu();
+  setTimeout(() => {
+    checkMenu();
+  }, 100);
   updateTitleTab();
   updatePitches();
   updateAccidentalText();

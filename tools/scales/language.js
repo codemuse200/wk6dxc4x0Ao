@@ -238,7 +238,9 @@ function changeLanguage(langparameter) {
   });
 
   updateFlagImage(langparameter);
-  checkMenu();
+  setTimeout(() => {
+    checkMenu();
+  }, 100);
   updateTitleTab();
 
   if (typeof selectOptionScale === "function") {
