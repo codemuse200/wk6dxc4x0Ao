@@ -496,7 +496,7 @@ function updateAccidentalText() {
   updatePitches();
   setTimeout(() => {
     updateCmtTexts();
-  }, 100);
+  }, 200);
 
 }
 

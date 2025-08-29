@@ -373,6 +373,8 @@ const cmt = {
     },
 }
 
+updateCmtTexts();
+
 function updateCmtTexts(){
     let id = globalSelectedIDForTexts.replaceAll("#", "s");
 
