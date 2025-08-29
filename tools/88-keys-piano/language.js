@@ -61,7 +61,7 @@ const translations = {
     centext2: `You're looking at the first version of the virtual
                piano. If you like this project and want it to keep
                growing, you can support its development with a
-               <a href="../../donate/index.html" id="linkDonation" class="link-donation"> donation</a>.`,
+               <a href="/donate/" id="linkDonation" class="link-donation"> donation</a>.`,
     txtRotDev: "Please rotate your device to see the full piano",
     txtArrowText1: "Use LEFT/RIGHT to adjust left-hand octave",
     txtArrowText2: "Use UP/DOWN to adjust right-hand octave",
@@ -100,7 +100,7 @@ const translations = {
     centext2: `Estás viendo la primera versión del piano
                virtual. Si este proyecto te gusta y quieres
                que siga creciendo, puedes apoyar su desarrollo
-               con una <a href="../../donate/index.html" id="linkDonation" class="link-donation"> donación</a>.`,
+               con una <a href="/donate/" id="linkDonation" class="link-donation"> donación</a>.`,
     txtRotDev: "Por favor, gira tu dispositivo para ver todo el piano",
     txtArrowText1: "Ajusta la octava izquierda con ←/→",
     txtArrowText2: "Ajusta la octava derecha con ↑/↓",
@@ -139,7 +139,7 @@ const translations = {
     centext2: `Você está vendo a primeira versão do piano
                virtual. Se você gosta deste projeto e quer que
                que ele continue crescendo, pode apoiar seu
-               desenvolvimento com uma <a href="../../donate/index.html" id="linkDonation" class="link-donation"> doação</a>.`,
+               desenvolvimento com uma <a href="/donate/" id="linkDonation" class="link-donation"> doação</a>.`,
     txtRotDev: "Por favor, vire o dispositivo para ver o piano completo",
     txtArrowText1: "Ajuste a oitava esquerda com ←/→",
     txtArrowText2: "Ajuste a oitava direita com ↑/↓",
@@ -219,9 +219,9 @@ function updateFlagImage(lang) {
     const mbl_img_langNotation_element = document.getElementById("mblImgLangNotationFlagSelected");
     
     // Actualizar el src según el idioma
-    imgElement.src = `../../_assets/images/flags/${lang}.png`;
-    mbl_img_lang_element.src = `../../_assets/images/flags/${lang}.png`;
-    mbl_img_langNotation_element.src = `../../_assets/images/flags/${langNotation}.png`;
+    imgElement.src = `/_assets/images/flags/${lang}.png`;
+    mbl_img_lang_element.src = `/_assets/images/flags/${lang}.png`;
+    mbl_img_langNotation_element.src = `/_assets/images/flags/${langNotation}.png`;
 }
 
 
