@@ -1,0 +1,56 @@
+Do mayor / La menor
+Do Mayor y La Menor son las tonalidades más "neutras" visualmente, ya que no tienen alteraciones en la armadura. Por esta razón, suelen ser las primeras que aprenden los principiantes. Por su simplicidad, también son comunes en ejercicios de técnica, armonía y composición. Do Mayor transmite una sensación de pureza, claridad y equilibrio. Su escala está formada exclusivamente por las teclas blancas del piano.
+
+La Menor, su relativa menor, tiene un carácter más introspectivo o melancólico, aunque sigue siendo accesible y muy utilizada en composiciones tanto clásicas como populares. Al igual que Do Mayor, usa únicamente las teclas blancas, lo que facilita su ejecución técnica.
+
+
+
+Ejemplos: 
+
+Examples:
+
+C major: J.S. Bach - Prelude in C Major
+A minor: Beethoven - Für Elise
+
+G major: J.S. Bach - Minuet in G Major (BWV Anh. 114)
+E minor: Chopin - Prelude Op. 28 No. 4
+
+D major: Pachelbel - Canon in D
+B minor: E. Grieg - In the Hall of the Mountain King
+
+A major: Mozart - Rondo Alla Turca (Turkish March)
+F# minor: Mendelssohn - Fantasie in F-sharp minor
+
+E major: Vivaldi - The Four Seasons: Spring
+C# minor: Beethoven – Moonlight Sonata, Mov. I & III
+
+B major: Chopin – Nocturne Op. 32 No. 1
+G# minor: Liszt - La campanella
+
+F# major: Schumann - Romance Op. 28 No. 2
+D# minor: Scriabin - Etude Op. 8 No. 12
+
+C# major: Scriabin - Étude Op. 8 No. 1
+A# minor: Rarely used (enharmonic of Bb minor)
+
+F major: Vivaldi - The Four Seasons: Autumn
+D minor: Lacrimosa - Mozart
+
+Bb major: Schubert/Liszt - Ave Maria in Bbmajor
+G minor: Vivaldi - The Four Seasons: Summer
+
+Eb major: Chopin Nocturne Op. 9 No. 2
+C minor: Beethoven - Piano Sonata "Pathétique" No.8 Op.13
+
+Ab major: Liszt - Liebestraum No. 3
+F minor: Vivaldi - The Four Seasons: Winter
+
+Db major: Debussy - Clair de lune
+Bb minor: Chopin - Piano Sonata No. 2 "Funeral March"
+
+Gb major: Chopin - Etude Op. 10 No. 5 (black keys)
+Eb minor: Chopin - Prelude Op. 28 No. 14
+
+Cb major: Rarely used (enharmonic of B major)
+Ab minor: Rarely used (enharmonic of G# minor)
+

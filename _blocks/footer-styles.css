@@ -1,0 +1,332 @@
+@font-face {
+  font-family: 'custom-sriracha';
+  src: url('/_assets/fonts/sriracha/sriracha-regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* --------------- EMPIEZA EL FOOTER --------------- */
+
+.pre-footer {
+  margin-top: 48px;
+  height: 8px;
+  background-color: var(--color-lightgrey-pre-footer);
+}
+
+.footer {
+  /*height: 512px;*/
+  background: linear-gradient(to bottom right, var(--color-purple-footer), var(--color-green-footer));
+  align-items: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.ft-donation {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 48px;
+}
+
+.ft-donation-title {
+  color: white;
+  width: 100%;
+  font-size: 26px;
+}
+
+.ft-donation-description {
+  color: white;
+  width: 45%;
+  font-size: 16px;
+  margin-top: 16px;
+  font-weight: 200;
+}
+
+.ft-donation-button {
+  /*background-color: rgba(0, 0, 0, 0);
+  border: 1px solid var(--color-lightgrey-a);
+  background: linear-gradient(to right, #5eac8b, #4aaa4b);
+   */
+  background: linear-gradient(to right, #DA77E5, #454BB9);
+  border: none;
+  color: white;
+  border-radius: 16px; /* Bordes redondeados */
+  padding: 10px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 20px 0 16px 0;
+  transition: background-color 0.2s ease;
+  font-weight: 600;
+  font-family: "Poppins", serif;
+}
+
+.ft-donation-button a {
+  text-decoration: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.ft-donation-button:hover {
+  animation: saturateEffectFooter 2s infinite alternate ease-in-out;
+}
+
+@keyframes saturateEffectFooter {
+  0% {filter: saturate(1);}
+  100% {filter: saturate(3);}
+}
+
+.ft-divider {
+  width: 70%;
+  height: 1px;
+  background-color: #ffffff1e;
+  margin: 20px 0;
+}
+
+.ft-index {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+}
+
+.ft-logo {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  margin: 16px 64px 0 32px;
+  height: 100%;
+}
+
+.ft-img-logo {
+  width: 48px;
+  height: 48px;
+}
+
+.ft-logo-text {
+  display: flex;
+  font-family: "custom-sriracha", serif;
+  font-size: 22px;
+  color: white;
+  align-items: center;
+}
+
+.ft-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.ft-column {
+  text-align: left;
+  font-size: 14px;
+  margin-right: 96px;
+}
+
+.ft-column-title {
+  color: #85e079;
+  font-weight: 700;
+  margin-bottom: 4px;
+  font-size: 16px;
+}
+
+.ft-column-list {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.ft-column-list a {
+  text-decoration: none;
+  color: white;
+}
+
+.ft-column-list-item {
+  padding: 4px 0 4px 0;
+}
+
+.ft-column-list-item:hover {
+  color: #2ce632;
+}
+
+.ft-column-list-item.last-item {
+  margin-bottom: 32px;
+}
+
+.ft-lastrow {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  width: 70%;
+  justify-content: space-between;
+  font-size: 12px;
+  margin-bottom: 24px;
+  align-items: center;
+}
+
+.ft-privacy-policy {
+  cursor: pointer;
+  text-decoration: none;
+  color: white  ;
+}
+
+.ft-privacy-policy:hover {
+  text-decoration: underline;
+}
+
+.ft-lastrow-ToSpp {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+
+/* ------------ MOBILE SECTION ------------ */
+
+.ft-column-arrow {
+  display: none;
+}
+
+/* Responsivo para móviles */
+@media (max-width: 767px) {
+  html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden!important;
+  }
+
+  /* --------------- Footer Mobile ---------------- */
+
+  .ft-donation-description {
+    width: 90%;
+  }
+
+  .ft-donation-button {
+  animation: saturateEffectFooter 2s infinite alternate ease-in-out;
+  }
+
+  .ft-index {
+    flex-direction: column;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .ft-logo {
+    margin: 0 16px 32px 0;
+  }
+
+  .ft-row {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .ft-column {
+    width: 95%;
+  }
+
+  .ft-column-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+    outline: 1px solid rgb(172, 172, 172);
+    padding: 8px;
+    width: 100%;
+    margin-bottom: 8px;
+  }
+  
+  .ft-column-list {
+    display: none;
+    margin-bottom: 16px;
+    margin-right: -18px;
+  }
+
+  .ft-column-list-item.last-item {
+    margin-bottom: 8px;
+  }
+
+  .ft-column:hover .ft-column-list {
+    display: flex;
+    border-bottom: 1px solid rgb(172, 172, 172);
+    border-left: 1px solid rgb(172, 172, 172);
+    border-right: 1px solid rgb(172, 172, 172);
+  }
+
+  .ft-column:hover .ft-column-title {
+    outline: none;
+    border-top: 1px solid rgb(172, 172, 172);
+    border-left: 1px solid rgb(172, 172, 172);
+    border-right: 1px solid rgb(172, 172, 172);
+    border-bottom: none;
+  }
+
+  .ft-column-arrow {
+    width: 2px;
+    display: block;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid white;
+    transition: transform ease-in-out 0.3s;
+    right: 0;
+    margin-right: 4px;
+  }
+
+  .ft-column-list-item {
+    margin-left: 6px;
+  }
+
+  .ft-lastrow {
+    flex-direction: column;
+    gap: 4px;
+  }
+}
+
+
+/* ------------- EMPIEZA MOBILE EN LANDSCAPE ------------- */
+
+/* Los celulares suelen tener pointer: coarse,
+   mientras que las computadoras generalmente
+   usan pointer: fine. */
+
+@media (orientation: landscape) and (pointer: coarse) {
+  /* Estilos específicos para móviles en modo horizontal */
+
+  .ft-donation-description {
+    width: 76%;
+  }
+
+  .ft-divider,
+  .ft-index,
+  .ft-lastrow {
+    width: 90%;
+  }
+}
+
+/* iPad */
+@media (orientation: portrait) and (pointer: coarse) {
+  /* Estilos específicos para iPads y Tablets */
+
+  .ft-donation-description {
+    width: 76%;
+  }
+
+  .ft-divider,
+  .ft-index {
+    width: 100%;
+  }
+
+  .ft-lastrow {
+    width: 85%;
+  }
+}

@@ -1,0 +1,76 @@
+Privacy Policy
+Last updated: November 02, 2024
+
+1. Introduction
+Thank you for using the [Nombre_de_la_página] application. This Privacy Policy explains how we collect, use, and protect information related to the use of our application. We are committed to ensuring the privacy protection of our users and complying with applicable regulations.
+By downloading and using the application, you agree to the terms of this Privacy Policy. If you have any questions or concerns about this policy, please feel free to contact us.
+
+2. Information Collection
+Our application does not collect, store, or share users' personal data. We do not request any personally identifiable information or access to your device that includes personal data.
+
+3. App Permissions
+The application may require basic permissions, such as Internet access, to ensure its optimal functioning. These permissions are used exclusively for the proper operation of the application and not to access, collect, or store users' personal information.
+
+4. Security
+We strive to maintain the security of the application and protect it against any unauthorized access or alteration attempts. However, since the application does not collect or store personal information, there is no user data at risk.
+
+5. Third-Party Services
+Our application does not use or integrate with third-party services that collect user information in any way. If this changes in the future, we will update this policy to reflect any use of third-party services and the data that may be processed.
+
+6. Changes to This Privacy Policy
+We reserve the right to update this Privacy Policy at any time. In the event of significant changes, we will notify you by updating this policy within the application or through a notice in the app store. We recommend reviewing this policy periodically to stay informed of any changes.
+
+7. Acceptance of This Policy
+By using the application, you agree to the terms outlined in this Privacy Policy. If you do not agree with this policy, please do not use the application.
+
+
+------------------------------------------------------------------------------------------
+
+Privacy Policy
+Last Update: August 18, 2025
+
+1. Introduction
+Thank you for visiting [website]. This Privacy Policy explains how we handle information collected through our website. We are committed to protecting user privacy and complying with relevant data protection regulations. By browsing or using our website, you agree to the terms of this Privacy Policy. If you have any questions or concerns, please feel free to contact us.
+
+2. Information Collection
+Our website does not actively collect, store, or share personal data from visitors. We do not request or process personally identifiable information unless you voluntarily provide it (e.g., via future updates). However, for user convenience, our site stores limited non-personal data in your browser cache or local storage. This includes preferences such as the selected display language and musical elements saved through features like "Saved Chords." This data is stored locally on your device and is not transmitted to our servers.
+
+3. Cookies and Tracking Technologies
+We do not use cookies or tracking technologies to collect data about your browsing behavior. If we implement these tools in the future, we will update this policy and notify users accordingly.
+
+4. Security
+We take reasonable measures to safeguard our website from unauthorized access, alteration, or misuse. As we do not store personal data directly through the site, the risk to user data is minimal.
+
+5. Third-Party Services
+Our website does not currently integrate with third-party services that collect personal information. Should this change, we will update this policy and disclose the nature of such integrations.
+
+6. Changes to This Privacy Policy
+We may update this Privacy Policy from time to time. Significant changes will be reflected directly on this page, and we encourage you to check back periodically to stay informed.
+
+7. Acceptance of This Policy
+By continuing to use this website, you acknowledge and accept the terms outlined in this Privacy Policy. If you do not agree, please refrain from using the site.
+
+------------------------------------------------------------------------------------------
+
+Terms of Use
+Last updated: August 18, 2025
+
+Welcome to [website]! By accessing and using this website, you agree to the following terms and conditions. Please read them carefully.
+
+1. Use of the Website
+This website offers free musical tools such as a chord finder, scale identifier, key signature guides, virtual piano, and other resources. These tools are provided for informational, educational, and/or entertainment purposes only. You agree to use the website responsibly and not engage in any activity that could harm or disrupt its functionality.
+
+2. Privacy
+We do not collect personal data from users. No login or account creation is required to access the features. Basic, anonymized analytics may be used to improve functionality (e.g., tool usage frequency), but no personally identifiable information is tracked. For more information, please refer to our [Privacy Policy].
+
+3. Intellectual Property
+All content on this site — including tool interfaces, design elements, source code, audio, video, text, and graphics — is protected by applicable intellectual property laws. You may use the tools freely, but you may not copy, modify, distribute, or republish the content without prior permission.
+
+4. Limitation of Liability
+We strive to keep the tools accurate and useful, but we make no guarantees. This website and its content are provided "as is," without warranties of any kind. We are not liable for any damages resulting from the use of the site.
+
+5. Changes to These Terms
+We reserve the right to update these Terms of Service at any time. Changes will be posted on this page with a revised “Last Updated” date. Continued use of the website after changes implies acceptance of the updated terms.
+
+6. Contact
+If you have any questions or concerns, feel free to reach out to us at [email].

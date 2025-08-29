@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Akordify - Releases </title>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <meta name="description" content="Explore powerful music tools: a full 88-key virtual piano, advanced interactive chord finder, tempo tapper, key signatures and scales visualizer. Perfect for musicians and learners.">
+  <meta name="keywords" content="virtual piano, chord finder, music tools, tempo tap, key signatures, scales, music theory, online piano">
+  <meta name="author" content="Akordify">
+  <meta name="robots" content="index, follow">
+  <meta http-equiv="Content-Language" content="en">
+  
+  <!-- Open Graph (Facebook, LinkedIn, etc.) -->
+  <meta property="og:title" content="Powerful Music Tools: Full Virtual Piano, Chord Finder & More">
+  <meta property="og:description" content="Play, learn, and create with our suite of online music tools. From a full piano to complex chords and scales.">
+  <meta property="og:image" content="https://akordify.com/_assets/preview-image.png">
+  <meta property="og:url" content="https://akordify.com">
+  <meta property="og:type" content="website">   
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Powerful Music Tools: Full Virtual Piano, Chord Finder & More">
+  <meta name="twitter:description" content="Explore our online music toolkit: 88-key piano, chord finder, tempo tapper, and more.">
+  <meta name="twitter:image" content="https://akordify.com/_assets/preview-image.png">
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../../_blocks/footer-styles.css"> 
+  <link rel="stylesheet" href="../../_blocks/navbar-styles.css">
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&display=swap">  
+
+
+</head>
+<body style="visibility: hidden;">
+
+    <svg class="background-svg" xmlns="http://www.w3.org/2000/svg" width="100%" height="200" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <path d="M0,70 140,0 T200,0 V100 H0 Z" fill="#F9F9F9" />
+    </svg>
+
+    <div id="navbar"> </div>
+
+    <main>
+        <div class="titles">
+            <span id="mainTitle" class="titles-title"> Releases </span>
+            <span id="mainDescription" class="titles-subtitle"> Last Update: August 27, 2025 </span>
+        </div>
+
+        <div class="divider">  </div>
+
+        <div class="version">
+            <div class="vtitle">
+                <div id="txt100version" class="vt-main"> v1.0.0 </div>
+                <div id="txt100date" class="vt-date"> 27/08/2025 </div>
+                <div id="txtNoteDebut" class="vt-note debut"> Debut release </div>
+                <div id="txtNoteCurrent" class="vt-note current"> Current version </div>
+            </div>
+
+            <div class="divider"> </div>
+
+            <div class="vp-container">
+                <div id="txt100t1" class="vanother-title"> Features </div>
+
+                <div class="vp">
+                    <div id="txt100vpt1i1" class="vp-title"> Tools: </div>
+                    <p id="txt100vpd1i1" class="vp-description" data-translate="inner">
+                        • 88 keys piano <br>
+                        • Chord Finder <br>
+                        • Tap n' Tempo <br>
+                        • Scales <br>
+                        • Key Signatures <br>
+                    </p>
+                </div>
+
+                <div class="vp">
+                    <div id="txt100vpt1i2" class="vp-title"> Languages: </div>
+                    <p id="txt100vpd1i2" class="vp-description" data-translate="inner">
+                        • English <br>
+                        • Spanish <br>
+                        • Portuguese <br>
+                    </p>
+                </div>
+
+                <div class="vp">
+                    <div id="txt100vpt1i3" class="vp-title"> Notation Languages: </div>
+                    <p id="txt100vpd1i3" class="vp-description" data-translate="inner">
+                        • English <br>
+                        • Spanish <br>
+                        • Portuguese <br>
+                    </p>
+                </div>
+            </div>                
+
+        </div>
+    </main>
+
+    <div id="footer"> </div>
+
+    <script>
+        Promise.all([
+            fetch('../../_blocks/navbar.html').then(res => res.text()),
+            fetch('../../_blocks/footer.html').then(res => res.text())
+        ])
+        .then(([navbarHtml, footerHtml]) => {
+            document.getElementById('navbar').innerHTML = navbarHtml;
+            document.getElementById('footer').innerHTML = footerHtml;
+        })
+        .then(() => {
+            // Esperar al siguiente ciclo del event loop para asegurar que el DOM esté actualizado
+            setTimeout(() => {
+                // Cargar scripts dinámicamente
+                const scripts = [
+                    "language.js",
+                    "../../_global/mobile-general.js"
+                ];
+
+                function loadScriptsSequentially(scripts, index = 0) {
+                    if (index >= scripts.length) return;
+
+                    const script = document.createElement("script");
+                    script.src = scripts[index];
+                    script.defer = true; // Asegura que se ejecute después del DOM
+                    script.onload = () => loadScriptsSequentially(scripts, index + 1);
+                    script.onerror = () => console.error(`Error loading ${scripts[index]}`);
+                    document.body.appendChild(script);
+                }
+
+                loadScriptsSequentially(scripts);
+
+                // scripts.forEach(src => {
+                //     const script = document.createElement("script");
+                //     script.src = src;
+                //     script.defer = true; // Asegura que se ejecute después del DOM
+                //     document.body.appendChild(script);
+                // });
+
+                // Ejecutar funciones dependientes del DOM
+                function checkMenu() {
+                    const menuMain = document.getElementById("menuMain");
+                    const menuMainSmall = document.getElementById("menuMainSmall");
+
+                    if (!menuMain || !menuMainSmall) return; // Evitar errores si no existen
+
+                    menuMain.style.display = "flex";
+                    menuMainSmall.style.display = "none";
+
+                    if (menuMain.scrollHeight > menuMain.clientHeight) {
+                        menuMain.style.display = "none";
+                        menuMainSmall.style.display = "flex";
+                    }
+                }
+
+                window.addEventListener("load", checkMenu);
+                window.addEventListener("resize", checkMenu);
+            }, 0); // Esto asegura que el DOM esté listo
+
+            // Este timeout es para que el body aparezca cuando ya se haya cargado el navbar/footer
+            // y también se haya actualizado el idioma al que tenga el usuario
+            setTimeout(() => { 
+                document.body.style.visibility = 'visible';
+            }, 200);
+        });
+    </script>
+
+</body>
+</html>

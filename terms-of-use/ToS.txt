@@ -1,0 +1,29 @@
+-----------------------------------------------------------------------------------
+
+Terms of Use
+Last updated: August 18, 2025
+
+Welcome to [website]! By accessing and using this website, you agree to the following terms and conditions. Please read them carefully.
+
+1. Use of the Website
+This website offers free musical tools such as a chord finder, scale identifier, key signature guides, virtual piano, and other resources. These tools are provided for informational, educational, and/or entertainment purposes only. You agree to use the website responsibly and not engage in any activity that could harm or disrupt its functionality.
+
+2. Privacy
+We do not collect personal data from users. No login or account creation is required to access the features. Basic, anonymized analytics may be used to improve functionality (e.g., tool usage frequency), but no personally identifiable information is tracked. For more information, please refer to our [Privacy Policy].
+
+3. Intellectual Property
+All content on this site — including tool interfaces, design elements, source code, audio, video, text, and graphics — is protected by applicable intellectual property laws. You may use the tools freely, but you may not copy, modify, distribute, or republish the content without prior permission.
+
+4. Limitation of Liability
+We strive to keep the tools accurate and useful, but we make no guarantees. This website and its content are provided "as is," without warranties of any kind. We are not liable for any damages resulting from the use of the site.
+
+5. Changes to These Terms
+We reserve the right to update these Terms of Service at any time. Changes will be posted on this page with a revised “Last Updated” date. Continued use of the website after changes implies acceptance of the updated terms.
+
+6. Contact
+If you have any questions or concerns, feel free to reach out to us at [email].
+
+7. Acceptance of This Terms of Use
+By continuing to use this website, you acknowledge and accept the terms outlined in this Terms of Use. If you do not agree, please refrain from using the site.
+
+-----------------------------------------------------------------------------------

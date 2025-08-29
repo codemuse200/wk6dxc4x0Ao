@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Akordify - Key Signatures</title>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <meta name="description" content="Explore powerful music tools: a full 88-key virtual piano, advanced interactive chord finder, tempo tapper, key signatures and scales visualizer. Perfect for musicians and learners.">
+  <meta name="keywords" content="virtual piano, chord finder, music tools, tempo tap, key signatures, scales, music theory, online piano">
+  <meta name="author" content="Akordify">
+  <meta name="robots" content="index, follow">
+  <meta http-equiv="Content-Language" content="en">
+  
+  <!-- Open Graph (Facebook, LinkedIn, etc.) -->
+  <meta property="og:title" content="Powerful Music Tools: Full Virtual Piano, Chord Finder & More">
+  <meta property="og:description" content="Play, learn, and create with our suite of online music tools. From a full piano to complex chords and scales.">
+  <meta property="og:image" content="https://akordify.com/_assets/preview-image.png">
+  <meta property="og:url" content="https://akordify.com">
+  <meta property="og:type" content="website">   
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Powerful Music Tools: Full Virtual Piano, Chord Finder & More">
+  <meta name="twitter:description" content="Explore our online music toolkit: 88-key piano, chord finder, tempo tapper, and more.">
+  <meta name="twitter:image" content="https://akordify.com/_assets/preview-image.png">
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="/_blocks/footer-styles.css"> 
+  <link rel="stylesheet" href="/_blocks/navbar-styles.css">
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&display=swap">  
+</head>
+<body style="visibility: hidden;">
+
+  <svg class="background-svg" xmlns="http://www.w3.org/2000/svg" width="100%" height="200" viewBox="0 0 100 100" preserveAspectRatio="none">
+    <path d="M0,70 140,0 T200,0 V100 H0 Z" fill="#F9F9F9" />
+  </svg>
+
+  <div id="navbar"> </div>
+
+  <div class="titles-texts">
+    <div id="txtMainTitle" class="title" data-translate="inner">
+      <span class="title-keyword"> KEY </span> SIGNATURES
+      <!--
+      <span id="txtTitle12"> KEY </span>
+      <span id="txtTitle22"> SIGNATURES </span> 
+      -->
+    </div>
+    
+    <span id="txtSubtitle" class="subtitle"> Choose your favorite key signature and see how it's represented musically </span>
+  </div>
+
+  <div id="containerMainBody" class="container-main"> 
+    <div class="mainColumn container-main-left">
+      <div class="image-container">
+        <img id="key-signature" src="/_assets/images/keySignatures/ks-0.png" alt="Armadura" />
+      </div>
+
+      <div class="container-left-column">
+        <div class="cst-selector-main unselectable">
+          <div class="cst-mainBox">
+            <span id="cstSelected" class="cst-mainBox-text" data-valueid="cstCAm"> Do Mayor / La Menor </span> 
+            <div class="spacer"></div> <span class="material-icons-outlined">arrow_drop_down</span>
+          </div>
+          <div class="cst-selector-dropdown">
+            <div class="cst-row">  
+              <div class="cst-column">
+                <div id="cstCAm" class="cst-option selected" value="sharp-0" data-translate="keySignature"> Do Mayor / La Menor</div>
+                <div id="cstGEm" class="cst-option" value="sharp-1" data-translate="keySignature">Sol Mayor / Mi Menor</div>
+                <div id="cstDBm" class="cst-option" value="sharp-2" data-translate="keySignature">Re Mayor / Si Menor</div>
+                <div id="cstAFsm" class="cst-option" value="sharp-3" data-translate="keySignature">La Mayor / Fa# Menor</div>
+                <div id="cstECsm" class="cst-option" value="sharp-4" data-translate="keySignature">Mi Mayor / Do# Menor</div>
+                <div id="cstBGsm" class="cst-option" value="sharp-5" data-translate="keySignature">Si Mayor / Sol# Menor</div>
+                <div id="cstFsDsm" class="cst-option" value="sharp-6" data-translate="keySignature">Fa# Mayor / Re# Menor</div>
+                <div id="cstCsAsm" class="cst-option" value="sharp-7" data-translate="keySignature">Do# Mayor / La# Menor</div>
+              </div>
+
+              <div class="divider-vertical"> </div>
+
+              <div class="cst-column">
+                <div id="cstCAm2" class="cst-option" value="flat-0" data-translate="keySignature">Do Mayor / La Menor</div>
+                <div id="cstFDm" class="cst-option" value="flat-1" data-translate="keySignature">Fa Mayor / Re Menor</div>
+                <div id="cstBbGm" class="cst-option" value="flat-2" data-translate="keySignature">Sib Mayor / Sol Menor</div>
+                <div id="cstEbCm" class="cst-option" value="flat-3" data-translate="keySignature">Mib Mayor / Do Menor</div>
+                <div id="cstAbFm" class="cst-option" value="flat-4" data-translate="keySignature">Lab Mayor / Fa Menor</div>
+                <div id="cstDbBbm" class="cst-option" value="flat-5" data-translate="keySignature">Reb Mayor / Sib Menor</div>
+                <div id="cstGbEbm" class="cst-option" value="flat-6" data-translate="keySignature">Solb Mayor / Mib Menor</div>
+                <div id="cstCbAbm" class="cst-option" value="flat-7" data-translate="keySignature">Dob Mayor / Lab Menor</div>
+              </div>
+            </div>
+            <a href=""></a>
+          </div>
+
+        </div>
+
+
+        <div class="sf-toggle-buttons">
+          <button id="sharpButton" class="sf-toggle-btn active">#</button>
+          <button id="flatButton" class="sf-toggle-btn">b</button>
+        </div>
+
+        <div class="container-addrevbuttons">
+          <button id="removeAccidentalButton" class="control-btn">Quitar Sostenido</button>
+          <button id="addAccidentalButton" class="control-btn">Agregar Sostenido</button>
+        </div>
+
+        <div class="divider"></div>
+
+        <div id="txtAccidentals" class="accidentals-text">
+          No sharps or flats
+        </div>
+
+        <div class="spacer"> </div>
+
+        <div id="txtPitches" class="pitches-text">
+          Pitches:
+        </div>
+
+        <div id="pitchesNotes" class="pitches-notes">
+          C, D, E, F, G, A and B
+        </div>
+
+        <div class="piano-mini">
+          <div class="key white" data-note="C3"><span id="wk-c3" class="note-label wk-c3">C</span></div>
+          <div class="key black" data-note="C#3"><span id="bk-c#3" class="note-label-black bk-c#3"></span> </div>
+          <div class="key white" data-note="D3"><span id="wk-d3" class="note-label wk-d3">D</span></div>
+          <div class="key black" data-note="D#3"><span id="bk-d#3" class="note-label-black bk-d#3"></span> </div>
+          <div class="key white" data-note="E3"><span id="wk-e3" class="note-label wk-e3">E</span></div>
+          <div class="key white" data-note="F3"><span id="wk-f3" class="note-label wk-f3">F</span></div>
+          <div class="key black" data-note="F#3"><span id="bk-f#3" class="note-label-black bk-f#3"></span></div>
+          <div class="key white" data-note="G3"><span id="wk-g3" class="note-label wk-g3">G</span></div>
+          <div class="key black" data-note="G#3"><span id="bk-g#3" class="note-label-black bk-g#3"></span></div>
+          <div class="key white" data-note="A3"><span id="wk-a3" class="note-label wk-a3">A</span></div>
+          <div class="key black" data-note="A#3"><span id="bk-a#3" class="note-label-black bk-a#3"></span></div>
+          <div class="key white" data-note="B3"><span id="wk-b3" class="note-label wk-b3">B</span></div>
+          <div class="key white" data-note="C4"><span id="wk-c4" class="note-label wk-c4">C</span></div>
+          <div class="key black" data-note="C#4"><span id="bk-c#4" class="note-label-black bk-c#4"></span></div>
+          <div class="key white" data-note="D4"><span id="wk-d4" class="note-label wk-d4">D</span></div>
+          <div class="key black" data-note="D#4"><span id="bk-d#4" class="note-label-black bk-d#4"></span></div>
+          <div class="key white" data-note="E4"><span id="wk-e4" class="note-label wk-e4">E</span></div>
+          <div class="key white" data-note="F4"><span id="wk-f4" class="note-label wk-f4">F</span></div>
+          <div class="key black" data-note="F#4"><span id="bk-f#4" class="note-label-black bk-f#4"></span></div>
+          <div class="key white" data-note="G4"><span id="wk-g4" class="note-label wk-g4">G</span></div>
+          <div class="key black" data-note="G#4"><span id="bk-g#4" class="note-label-black bk-g#4"></span></div>
+          <div class="key white" data-note="A4"><span id="wk-a4" class="note-label wk-a4">A</span></div>
+          <div class="key black" data-note="A#4"><span id="bk-a#4" class="note-label-black bk-a#4"></span></div>
+          <div class="key white" data-note="B4"><span id="wk-b4" class="note-label wk-b4">B</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mainColumn container-main-right">
+      <div class="cmr-relative major">
+        <span id="cmrtxtRelativeMajor"> Relativa Mayor: </span>
+        <span id="cmrRelativeMajor" class="cmr-relative-chord"> C major chord </span>
+        <div class="cmr-relative-piano major">
+          <div class="key white" data-note="C3"><span id="wk-c3" class="note-label wk-c3">C</span></div>
+          <div class="key black" data-note="C#3"><span id="bk-c#3" class="note-label-black bk-c#3"></span> </div>
+          <div class="key white" data-note="D3"><span id="wk-d3" class="note-label wk-d3">D</span></div>
+          <div class="key black" data-note="D#3"><span id="bk-d#3" class="note-label-black bk-d#3"></span> </div>
+          <div class="key white" data-note="E3"><span id="wk-e3" class="note-label wk-e3">E</span></div>
+          <div class="key white" data-note="F3"><span id="wk-f3" class="note-label wk-f3">F</span></div>
+          <div class="key black" data-note="F#3"><span id="bk-f#3" class="note-label-black bk-f#3"></span></div>
+          <div class="key white" data-note="G3"><span id="wk-g3" class="note-label wk-g3">G</span></div>
+          <div class="key black" data-note="G#3"><span id="bk-g#3" class="note-label-black bk-g#3"></span></div>
+          <div class="key white" data-note="A3"><span id="wk-a3" class="note-label wk-a3">A</span></div>
+          <div class="key black" data-note="A#3"><span id="bk-a#3" class="note-label-black bk-a#3"></span></div>
+          <div class="key white" data-note="B3"><span id="wk-b3" class="note-label wk-b3">B</span></div>
+          <div class="key white" data-note="C4"><span id="wk-c4" class="note-label wk-c4">C</span></div>
+          <div class="key black" data-note="C#4"><span id="bk-c#4" class="note-label-black bk-c#4"></span></div>
+          <div class="key white" data-note="D4"><span id="wk-d4" class="note-label wk-d4">D</span></div>
+          <div class="key black" data-note="D#4"><span id="bk-d#4" class="note-label-black bk-d#4"></span></div>
+          <div class="key white" data-note="E4"><span id="wk-e4" class="note-label wk-e4">E</span></div>
+          <div class="key white" data-note="F4"><span id="wk-f4" class="note-label wk-f4">F</span></div>
+          <div class="key black" data-note="F#4"><span id="bk-f#4" class="note-label-black bk-f#4"></span></div>
+          <div class="key white" data-note="G4"><span id="wk-g4" class="note-label wk-g4">G</span></div>
+          <div class="key black" data-note="G#4"><span id="bk-g#4" class="note-label-black bk-g#4"></span></div>
+          <div class="key white" data-note="A4"><span id="wk-a4" class="note-label wk-a4">A</span></div>
+          <div class="key black" data-note="A#4"><span id="bk-a#4" class="note-label-black bk-a#4"></span></div>
+          <div class="key white" data-note="B4"><span id="wk-b4" class="note-label wk-b4">B</span></div>
+        </div>
+      </div>
+
+      <div class="cmr-relative minor">
+        <span id="cmrtxtRelativeMinor"> Relativa Menor: </span>
+        <span id="cmrRelativeMinor" class="cmr-relative-chord"> A minor chord </span>
+        <div class="cmr-relative-piano minor">
+          <div class="key white" data-note="C3"><span id="wk-c3" class="note-label wk-c3">C</span></div>
+          <div class="key black" data-note="C#3"><span id="bk-c#3" class="note-label-black bk-c#3"></span> </div>
+          <div class="key white" data-note="D3"><span id="wk-d3" class="note-label wk-d3">D</span></div>
+          <div class="key black" data-note="D#3"><span id="bk-d#3" class="note-label-black bk-d#3"></span> </div>
+          <div class="key white" data-note="E3"><span id="wk-e3" class="note-label wk-e3">E</span></div>
+          <div class="key white" data-note="F3"><span id="wk-f3" class="note-label wk-f3">F</span></div>
+          <div class="key black" data-note="F#3"><span id="bk-f#3" class="note-label-black bk-f#3"></span></div>
+          <div class="key white" data-note="G3"><span id="wk-g3" class="note-label wk-g3">G</span></div>
+          <div class="key black" data-note="G#3"><span id="bk-g#3" class="note-label-black bk-g#3"></span></div>
+          <div class="key white" data-note="A3"><span id="wk-a3" class="note-label wk-a3">A</span></div>
+          <div class="key black" data-note="A#3"><span id="bk-a#3" class="note-label-black bk-a#3"></span></div>
+          <div class="key white" data-note="B3"><span id="wk-b3" class="note-label wk-b3">B</span></div>
+          <div class="key white" data-note="C4"><span id="wk-c4" class="note-label wk-c4">C</span></div>
+          <div class="key black" data-note="C#4"><span id="bk-c#4" class="note-label-black bk-c#4"></span></div>
+          <div class="key white" data-note="D4"><span id="wk-d4" class="note-label wk-d4">D</span></div>
+          <div class="key black" data-note="D#4"><span id="bk-d#4" class="note-label-black bk-d#4"></span></div>
+          <div class="key white" data-note="E4"><span id="wk-e4" class="note-label wk-e4">E</span></div>
+          <div class="key white" data-note="F4"><span id="wk-f4" class="note-label wk-f4">F</span></div>
+          <div class="key black" data-note="F#4"><span id="bk-f#4" class="note-label-black bk-f#4"></span></div>
+          <div class="key white" data-note="G4"><span id="wk-g4" class="note-label wk-g4">G</span></div>
+          <div class="key black" data-note="G#4"><span id="bk-g#4" class="note-label-black bk-g#4"></span></div>
+          <div class="key white" data-note="A4"><span id="wk-a4" class="note-label wk-a4">A</span></div>
+          <div class="key black" data-note="A#4"><span id="bk-a#4" class="note-label-black bk-a#4"></span></div>
+          <div class="key white" data-note="B4"><span id="wk-b4" class="note-label wk-b4">B</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mainColumn container-main-texts">
+      <span id="cmtTitle" class="cmt-title"> C major / A minor </span>
+      <span id="cmtDescription" class="cmt-description"> 
+        <p> <b class="cmt-txtprimary">Do mayor</b> y <b class="cmt-txtsecondary">La menor</b>
+        son las tonalidades más "neutras" visualmente, ya que no tienen alteraciones en la
+        armadura. Por esta razón, suelen ser las primeras que aprenden los principiantes.
+        <b class="cmt-txtprimary">Do mayor</b> transmite una sensación de pureza, claridad y
+        equilibrio. Su escala está formada exclusivamente por las teclas blancas del piano. </p>
+
+        <p> <b class="cmt-txtsecondary">La menor</b>, su relativa menor, tiene un carácter más
+        introspectivo o melancólico, aunque sigue siendo accesible y muy utilizada en composiciones
+        tanto clásicas como populares. Al igual que <b class="cmt-txtprimary">Do mayor</b>, usa
+        únicamente las teclas blancas, lo que facilita su ejecución técnica. </p>
+
+        <p> Ambas tonalidades han sido usadas por compositores como Bach, Mozart o Chopin,
+        y aparecen en muchísimas canciones modernas. Por su simplicidad, también son comunes
+        en ejercicios de técnica, armonía y composición. </p>
+      </span>
+    </div>
+  </div>
+
+  <div id="footer"> </div>
+
+  <script>
+      Promise.all([
+          fetch('/_blocks/navbar.html').then(res => res.text()),
+          fetch('/_blocks/footer.html').then(res => res.text())
+      ])
+      .then(([navbarHtml, footerHtml]) => {
+          document.getElementById('navbar').innerHTML = navbarHtml;
+          document.getElementById('footer').innerHTML = footerHtml;
+      })
+      .then(() => {
+          // Esperar al siguiente ciclo del event loop para asegurar que el DOM esté actualizado
+          setTimeout(() => {
+              // Cargar scripts dinámicamente
+              const scripts = [
+                  "script.js",
+                  "language.js",
+                  "texts.js",
+                  "/_global/mobile-general.js"
+              ];
+
+              function loadScriptsSequentially(scripts, index = 0) {
+                  if (index >= scripts.length) return;
+
+                  const script = document.createElement("script");
+                  script.src = scripts[index];
+                  script.defer = true; // Asegura que se ejecute después del DOM
+                  script.onload = () => loadScriptsSequentially(scripts, index + 1);
+                  script.onerror = () => console.error(`Error loading ${scripts[index]}`);
+                  document.body.appendChild(script);
+              }
+
+              loadScriptsSequentially(scripts);
+
+              // scripts.forEach(src => {
+              //     const script = document.createElement("script");
+              //     script.src = src;
+              //     script.defer = true; // Asegura que se ejecute después del DOM
+              //     document.body.appendChild(script);
+              // });
+
+              // Ejecutar funciones dependientes del DOM
+              function checkMenu() {
+                  const menuMain = document.getElementById("menuMain");
+                  const menuMainSmall = document.getElementById("menuMainSmall");
+
+                  if (!menuMain || !menuMainSmall) return; // Evitar errores si no existen
+
+                  menuMain.style.display = "flex";
+                  menuMainSmall.style.display = "none";
+
+                  if (menuMain.scrollHeight > menuMain.clientHeight) {
+                      menuMain.style.display = "none";
+                      menuMainSmall.style.display = "flex";
+                  }
+              }
+
+              window.addEventListener("load", checkMenu);
+              window.addEventListener("resize", checkMenu);
+          }, 0); // Esto asegura que el DOM esté listo
+
+          // Este timeout es para que el body aparezca cuando ya se haya cargado el navbar/footer
+          // y también se haya actualizado el idioma al que tenga el usuario
+          setTimeout(() => { 
+              document.body.style.visibility = 'visible';
+          }, 200);
+      });
+  </script>
+
+</body>
+</html>

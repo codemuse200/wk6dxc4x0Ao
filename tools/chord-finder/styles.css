@@ -1,0 +1,784 @@
+:root {
+  --color-page-background: #f4f4f4;
+
+  --color-green-main: #4caf50; /* El verde principal, se usa por ejemplo para el botón CLEAR y es el color de las teclas presionadas */
+  --color-green-main-hover: #45a049;
+  --color-green-main-border: #388E3C;
+  --color-green-main-highlight: #2ce632;
+  --color-green-blackKeys: #095F30; /* El verde más oscuro para las teclas negras y otros usos*/
+  --color-green-blackKeys-hover: #084b26;
+  --color-green-blackKeys-highlight: #13914c; /* El verde más oscuro para las teclas negras y otros usos*/
+  --color-green-strong: #0daf63; /* Un verde más fuerte, se usa por ejemplo para bordes */
+  --color-green-soft: #dbffe4; /* Verde muy suave, por ejemplo para el fondo de un botón */
+  --color-green-soft-hover: #b9eec2;
+  --color-green-footer: #2f6e31;
+
+  --color-purple-main: #2c115f;
+  --color-purple-strong: #3c0baf;
+  --color-purple-secondary: #543d7a;
+  --color-purple-light: #a57eff;
+  --color-purple-soft-a: #f2ecff;
+  --color-purple-soft-b: #ece4fc;
+  --color-purple-soft-hover: #dfd2fc;
+  --color-purple-footer: #260d53;
+
+  --color-red-strong: #af0d0d;
+
+  --color-white-hover: #e0e0e0;
+  --color-white-labels: #eeeeee;
+
+  --color-grey-labels-a: #777777;
+  --color-grey-labels-b: #888888;  
+  --color-grey-borderButton: #aaaaaa;
+
+  --color-lightgrey-a: #e9e9e9;
+  --color-lightgrey-divider: #dadada;
+  --color-lightgrey-pre-footer: #dadada;
+
+  --color-darkgrey-actionButton: #3b3b3b; /*El gris para los botones como PlayChord, Mute, y otros, que usan MaterialIcons*/
+  --color-darkgrey-labels-a: #333333; /* El gris para los textos */
+  --color-darkgrey-labels-b: #222222; /* El gris para otros textos */  
+}
+
+html {
+  overflow-x: hidden!important;
+}
+
+html {
+  min-height: 100%;
+}
+
+.unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@font-face {
+  font-family: 'custom-sriracha';
+  src: url('../../_assets/fonts/sriracha/sriracha-regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.divider {
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-lightgrey-divider);
+  margin: 40px 0;
+}
+
+.spacer {
+  flex-grow: 1;
+}
+
+.background-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Coloca el SVG detrás del contenido */
+}
+
+body {
+  font-family: "Poppins", serif;
+  /*display: flex;*/
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: var(--color-page-background);
+}
+
+/* ------------ Chord Finder ------------- */
+
+.cf-titles-texts {
+  font-family: "Poppins", serif;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center; /* Asegura que el texto dentro se alinee bien */  
+  margin-bottom: 20px;
+}
+
+.cf-title {
+  font-size: 38px;
+  font-weight: bold;
+  color: var(--color-darkgrey-labels-b);
+}
+
+.cf-title-mainWord {
+  color: var(--color-green-main);
+}
+
+.cf-subtitle {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--color-darkgrey-labels-b);
+}
+
+.cf-search-container {
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  align-items: center;
+  height: 48px;
+  background-color: white;
+  border: 2px solid;
+  /*background-color: var(--color-lightgrey-a);*/
+  border-radius: 4px;
+  transition: background-color 0.3s ease;  
+}
+
+.cf-search-container:hover {
+  background-color: var(--color-purple-soft-a);
+  border: 2px solid;
+  border-color: var(--color-purple-strong);
+}
+
+.cf-search-button {
+  padding-left: 10px;
+  display: flex;
+  justify-content: center;
+  color: var(--color-purple-strong);
+  border: none;
+  cursor: pointer;
+  background: none;
+}
+
+.cf-search-cancel-button {
+  display: none; /* Está como display None porque aparece cuando el usuario escribe en el input */
+  padding-right: 10px;
+  color: var(--color-purple-strong);
+  border: none;
+  cursor: pointer;  
+  background: none;
+}
+
+.cf-search-input {
+  background: none;
+  border: none;
+  box-shadow: none;
+  outline: none;  
+  border-radius: 0px;
+  font-family: "Poppins", serif;
+  font-size: 16px;
+  width: 90%;
+}
+
+.cf-search-result {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  margin-bottom: 10px;  
+  color: var(--color-red-strong);
+}
+
+.cf-search-result.active {
+  color: var(--color-green-strong);
+}
+
+.rptb-buttons {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-darkgrey-actionButton);
+  border: none;
+  cursor: pointer;
+  background: none;
+}
+
+.rptb-buttons .material-icons {
+  font-size: 24px;
+}
+
+#rptb-saveButton {
+  color: var(--color-green-strong);
+}
+
+#materialSaveIconButton {
+  font-size: 32px;
+  color: var(--color-green-strong);
+  transition: color 0.2s;
+}
+
+#materialSaveIconButton:hover {
+  color: var(--color-purple-main);
+}
+
+#materialSaveIcon {
+  font-size: 32px;
+  color: var(--color-green-strong);
+}
+
+.rptb-copy-container {
+  position: absolute;
+  display: flex;
+  align-items: end;
+  justify-content: end;
+  width: 100%;
+  pointer-events: none; /* Hace que el contenedor no pueda ser clickeable */
+  z-index: 10;
+}
+
+#rptb-copy {
+  display: block;
+  position: relative;
+  color: var(--color-green-strong);
+  align-items: end;
+  justify-content: end;
+  pointer-events: auto; /* Hace que el botón pueda ser clickeable */
+}
+
+#rptb-copy .material-icons{
+  font-size: 28px;
+}
+
+.rptb-copy-container.noChord{
+  display: none;
+}
+
+.tooltip-copy-container {
+  visibility: hidden;
+  width: 140px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 5;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip-copy-container::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+  z-index: 5;
+}
+
+.rptb-copy-container:hover .tooltip-copy-container {
+  visibility: visible;
+  opacity: 1;
+  z-index: 5;
+}
+
+.container-main {
+  display: flex;
+  flex-direction: column; /* Apila los elementos verticalmente */
+  align-items: center;    /* Centra los elementos horizontalmente */
+  gap: 20px;              /* Espaciado entre elementos */
+  margin-top: 32px;
+}
+
+.piano {
+  display: column;
+  /*flex-direction: column;*/
+  /*position: relative; /* Agregado para que los elementos dentro de .piano se posicionen correctamente */
+  align-items: center; /* Para centrar el piano */
+  width: 580px;
+}
+
+.row-piano-top-buttons {
+  display: flex;               /* Coloca los elementos en fila */
+  /*justify-content: space-around; /* Espaciado uniforme entre botones */
+  align-items: center;         /* Alinea los botones verticalmente */
+  width: 100%;                 /* Haz que ocupe todo el ancho de su contenedor */
+  margin-bottom: 10px;         /* Espaciado inferior opcional */
+  gap: 10px;                   /* Espaciado entre botones */
+  box-sizing: border-box;      /* Asegúrate de incluir padding y bordes en el ancho */
+}
+
+
+.clear-btn{
+  background-color: var(--color-green-main); /* Verde */
+  color: white;
+  border: 2px solid var(--color-green-main-border);
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  /*position: absolute; /* Lo posicionamos dentro de .piano */
+  top: -48px; /* Lo mueve arriba del piano */
+  left: 0; /* Lo alineamos a la izquierda */
+  margin-left: 0px; /* Separado del borde izquierdo */
+  transition: background-color 0.2s ease;
+}
+
+.clear-btn:hover {
+  background-color: var(--color-green-main-hover); /* Un verde más oscuro */
+}
+
+.sf-toggle-buttons {
+  display: flex;
+  margin-left: 10px;
+  width: 85px;
+  /*gap: 10px; Espaciado entre los botones */
+}
+
+.sf-toggle-btn {  
+  border-top: 2px solid var(--color-grey-borderButton);
+  border-bottom: 2px solid var(--color-grey-borderButton);
+  background-color: var(--color-page-background);
+  color: var(--color-grey-labels-a);
+  padding: 9px 14px; 
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#sharpButton {
+  border-left: 2px solid var(--color-grey-borderButton);
+  border-right: 0px solid;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-style: solid;
+}
+
+#flatButton {
+  border-right: 2px solid var(--color-grey-borderButton);
+  border-left: 0px solid;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+#sharpButton.active {
+  border-right: 2px solid;
+  border-color: var(--color-green-strong);
+}
+
+#flatButton.active {
+  border-left: 2px solid;
+  border-color: var(--color-green-strong);
+}
+
+.sf-toggle-btn.active {
+  background-color: var(--color-green-soft); /* Verde para el botón activo */
+  color: var(--color-green-strong);
+  font-weight: bold;
+}
+
+.sf-toggle-btn:hover {
+  background-color: var(--color-white-hover); /* Color de fondo al pasar el mouse */
+}
+
+.sf-toggle-btn.active:hover {
+  background-color: var(--color-green-soft-hover); /* Color de fondo al pasar el mouse */
+}
+
+.rptb-blackKeyButton {
+  display: flex;
+  margin-left: 10px;
+  border: 2px solid var(--color-grey-borderButton);
+  background-color: var(--color-page-background);
+  color: var(--color-grey-labels-a);
+  padding: 6px 6px; 
+  border-radius: 8px;
+  border-style: solid;  
+  cursor: pointer;
+  transition: text-content 0.2s ease;
+}
+
+.rptb-blackKeyButton.active {
+  background-color: var(--color-purple-soft-b); /* Verde para el botón activo */
+  color: var(--color-purple-main);
+  font-weight: bold;
+  border: 2px solid;
+  border-color: var(--color-purple-strong);
+}
+
+.rptb-blackKeyButton:hover {
+  background-color: var(--color-white-hover); /* Color de fondo al pasar el mouse */
+}
+
+.rptb-blackKeyButton.active:hover {
+  background-color: var(--color-purple-soft-hover); /* Color de fondo al pasar el mouse */
+}
+
+.spacer {
+  flex-grow: 1;
+}
+
+.octave {
+  display: flex;
+  position: relative;
+}
+
+.key {
+  height: 150px;
+  cursor: pointer;
+  user-select: none;
+
+  transition: background-color 0.2s ease;
+}
+
+.key.white {
+  position: relative;
+  width: 40px;
+  background-color: white;
+  border: 1px solid var(--color-darkgrey-labels-b);
+  z-index: 1;
+}
+
+.key.white:hover {
+  background-color: var(--color-white-hover);
+}
+
+.key.black {
+  width: 30px;
+  height: 100px;
+  background-color: black;
+  margin-left: -15px;
+  margin-right: -15px;
+  z-index: 2;
+  position: relative;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+
+.key.white.active {
+  background-color: var(--color-green-main) !important;
+}
+
+.key.white.active:hover {
+  background-color: var(--color-green-main-hover) !important;
+}
+
+.key.black.active {
+  background-color: var(--color-green-blackKeys) !important;
+}
+
+.key.black.active:hover {
+  background-color: var(--color-green-blackKeys-hover) !important;
+}
+
+.key.white.active.highlight {
+  background-color: var(--color-green-main-highlight) !important;
+  transition: transform 0.2s ease;
+  transform: scale(1.04);
+}
+
+.key.black.active.highlight {
+  background-color: var(--color-green-blackKeys-highlight) !important;
+  transition: transform 0.2s ease;
+  transform: scale(1.04);
+}
+
+.note-label {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--color-darkgrey-labels-b);
+}
+
+.note-label-black {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-white-labels);
+}
+
+.chord-display-container{
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  align-items: center;  
+  width: 100%;
+  height: 100%;
+  margin-top: 20px;
+}
+
+.chord-display {
+  display: block;
+  width: 100%;
+  height: 100%;  
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--color-darkgrey-labels-a);
+}
+
+.chord-display.noChord {
+  font-size: 20px;
+  font-weight: normal;
+  color: var(--color-grey-labels-b);
+}
+
+.chord-display-detail {
+  display: none;
+  margin-top: 4px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--color-grey-labels-a);
+}
+
+.chord-display-detail-match {
+  display: none;  
+  margin-top: 4px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--color-grey-labels-a);
+}
+
+.cf-saved-chords-container {
+  display: flex;
+  flex-direction: row;
+  padding-top: 56px;
+  align-items: center;
+}
+
+.cf-savedChords-text {
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+}
+
+.cf-saved-chords-nospace {
+  display: none;
+  color: red;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 8px;
+}
+
+.cf-saved-chords-nospace.active {
+  display: block;
+}
+
+.cf-chords-saved-list {
+  display: flex;
+  padding-top: 20px;
+  width: 100%;
+  align-content: center;
+  justify-content: space-between;
+}
+
+.cf-chord-saved {
+  position: relative;
+  display: flex;
+  background-color: var(--color-lightgrey-a);
+  align-content: center;
+  text-align: center;
+  justify-content: center;
+  place-items: center;
+  height: 64px;
+  width: 128px;
+  border-radius: 8px;
+  border: none;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+
+.cf-chord-saved.active{
+  cursor: pointer;
+  background: linear-gradient(to right, var(--color-purple-light), var(--color-lightgrey-a));
+  background-size: 1000% 100%; /* Expandimos el fondo */
+  animation: gradientFade 0.5s ease forwards;
+}
+
+.cf-chord-saved.active:hover {
+  filter: brightness(1.033);
+  transition: filter 0.2s ease;  
+}
+
+@keyframes gradientFade {
+    0% { background-position: left; }
+    100% { background-position: right; }
+}
+
+.delete-savedChord-container {
+  position: absolute;
+  display: none;
+  height: 100%;
+  width: 100%;
+  justify-content: end;
+  align-items: end;
+  margin-bottom: 2px;
+  margin-right: -12px;
+  z-index: 1000;
+}
+
+.deleteSavedChordIcons {
+  transform: scale(0.9);
+  background-color: rgba(233, 233, 233, 0.65);
+}
+
+.cf-chord-saved.active .delete-savedChord-container {
+  display: flex;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+
+.cf-chord-saved.active:hover .delete-savedChord-container {
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+
+.cf-bottomMessage {
+  color: var(--color-grey-labels-b);
+  font-size: 16px;
+  font-style: italic;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 48px;
+}
+
+.cf-bottomMessage-bold {
+  font-weight: 600;
+}
+
+/* ------------ MOBILE SECTION ------------ */
+
+.rptb-spacer {
+  display: none;
+}
+
+/* Responsivo para móviles */
+@media (max-width: 767px) {
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden!important;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  /* ----------- Inicio del Chord Finder Mobile ------------ */
+
+  .piano {
+    width: 100vw;
+  }
+
+  .cf-titles-texts {
+    width: 100%;
+  }
+
+  .cf-title {
+    width: 94%;
+    margin-top: 80px;
+    font-size: 32px;
+  }
+
+  .cf-subtitle {
+    margin-top: 8px;
+    width: 92%;
+    font-size: 18px;
+  }
+
+  .rptb-spacer {
+    display: block;
+  }
+
+  .row-piano-top-buttons {
+    width: 100%;
+    gap: 2px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .octave {
+    justify-content: center;
+  }
+
+  .key.white {
+    width: 6vw;
+    height: 120px;
+  }
+
+  .key.black {
+    width: 4vw;
+    height: 80px;
+    margin-left: -2vw;
+    margin-right: -2vw;
+  }
+
+  .note-label {
+    bottom: 6px;
+    font-size: 14px;
+  }
+
+  .note-label-black {
+    font-size: 7px;
+  }
+
+  #rptb-copy {
+    transform: translateX(-16px);
+  }
+
+  .cf-saved-chords-container {
+    margin-left: 10px;
+    margin-bottom: -8px;
+  }
+
+  .cf-savedChords-text {
+    font-size: 18px;
+  }
+
+  .cf-chords-saved-list {
+    width: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .cf-chord-saved {
+    width: 22%;
+  }
+
+  .cf-chord-saved {
+    font-size: 14px;
+  }
+
+  .cf-bottomMessage {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+}
+
+/* ------------- EMPIEZA MOBILE EN LANDSCAPE ------------- */
+
+/* Los celulares suelen tener pointer: coarse,
+   mientras que las computadoras generalmente
+   usan pointer: fine. */
+
+@media (orientation: landscape) and (pointer: coarse) {
+  /* Estilos específicos para móviles en modo horizontal */
+
+  .note-label, .note-label-black {
+    display: none;
+  }
+}

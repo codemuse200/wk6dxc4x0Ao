@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Akordify - Chord Finder</title>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <meta name="description" content="Explore powerful music tools: a full 88-key virtual piano, advanced interactive chord finder, tempo tapper, key signatures and scales visualizer. Perfect for musicians and learners.">
+  <meta name="keywords" content="virtual piano, chord finder, music tools, tempo tap, key signatures, scales, music theory, online piano">
+  <meta name="author" content="Akordify">
+  <meta name="robots" content="index, follow">
+  <meta http-equiv="Content-Language" content="en">
+  
+  <!-- Open Graph (Facebook, LinkedIn, etc.) -->
+  <meta property="og:title" content="Powerful Music Tools: Full Virtual Piano, Chord Finder & More">
+  <meta property="og:description" content="Play, learn, and create with our suite of online music tools. From a full piano to complex chords and scales.">
+  <meta property="og:image" content="https://akordify.com/_assets/preview-image.png">
+  <meta property="og:url" content="https://akordify.com">
+  <meta property="og:type" content="website">   
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Powerful Music Tools: Full Virtual Piano, Chord Finder & More">
+  <meta name="twitter:description" content="Explore our online music toolkit: 88-key piano, chord finder, tempo tapper, and more.">
+  <meta name="twitter:image" content="https://akordify.com/_assets/preview-image.png">
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="/_blocks/footer-styles.css">
+  <link rel="stylesheet" href="/_blocks/navbar-styles.css">
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&display=swap">  
+</head>
+
+<body style="visibility: hidden;">
+
+  <svg class="background-svg" xmlns="http://www.w3.org/2000/svg" width="100%" height="200" viewBox="0 0 100 100" preserveAspectRatio="none">
+    <path d="M0,70 140,0 T200,0 V100 H0 Z" fill="#F9F9F9" />
+  </svg>
+
+  <div id="navbar"></div>
+
+  <div class="container-main"> 
+    <div class="piano">
+      <div class="cf-titles-texts">
+        <div class="cf-title">
+          <span id="txtTitle11"> Chord </span> <span id="txtTitle12" class="cf-title-mainWord"> Finder </span>
+        </div>
+        <div id="txtSubtitle" class="cf-subtitle">
+          Discover a new way to find chord with our intuitive search tool and enhance your creative process
+        </div>
+      </div>
+
+      <div class="cf-search-container">
+        <button class="cf-search-button">
+          <span id="cf-search-button-span" class="material-icons-outlined">search</span>
+        </button>
+        <input id="cfSearchInput" type="text" class="cf-search-input" placeholder="Write a chord" data-translate="placeholder">
+        <button class="cf-search-cancel-button">
+          <span id="cf-search-cancel-button-span" class="material-icons-outlined">close</span>
+        </button>        
+      </div>
+
+      <div id="chordDisplayResult" class="cf-search-result">
+
+      </div>
+      
+      <div class="row-piano-top-buttons">
+        <div class="rptb-spacer spacer"> </div> <!-- Para celulares -->
+        <button id="clearButton" class="clear-btn">CLEAR</button>
+        <div class="sf-toggle-buttons">
+          <button id="sharpButton" class="sf-toggle-btn active">#</button>
+          <button id="flatButton" class="sf-toggle-btn">b</button>
+        </div>
+        <button id="rptb-blackKeyLabelButton" class="rptb-blackKeyButton">
+          <span id="rptb-blackKeyLabel-span" class="material-icons-outlined">text_increase</span>
+        </button>
+        <div class="spacer"> </div>
+        <button id="rptb-saveButton" class="rptb-buttons">
+          <span id="materialSaveIconButton" class="material-icons-outlined">book</span>
+        </button>
+        <button id="rptb-playChord" class="rptb-buttons">
+          <span id="rptb-playChord-span" class="material-icons">play_arrow</span>
+        </button>
+        <button id="rptb-mute" class="rptb-buttons">
+          <span id="rptb-mute-span" class="material-icons">volume_up</span>
+        </button>
+        <div class="rptb-spacer spacer"> </div>  <!-- Para celulares -->
+      </div> 
+
+      
+      <div class="octave">
+        <div class="key white" data-note="C3"><span id="wk-c3" class="note-label">C</span></div>
+        <div class="key black" data-note="C#3"><span id="bk-c#3" class="note-label-black"></span> </div>
+        <div class="key white" data-note="D3"><span id="wk-d3" class="note-label">D</span></div>
+        <div class="key black" data-note="D#3"><span id="bk-d#3" class="note-label-black"></span> </div>
+        <div class="key white" data-note="E3"><span id="wk-e3" class="note-label">E</span></div>
+        <div class="key white" data-note="F3"><span id="wk-f3" class="note-label">F</span></div>
+        <div class="key black" data-note="F#3"><span id="bk-f#3" class="note-label-black"></span></div>
+        <div class="key white" data-note="G3"><span id="wk-g3" class="note-label">G</span></div>
+        <div class="key black" data-note="G#3"><span id="bk-g#3" class="note-label-black"></span></div>
+        <div class="key white" data-note="A3"><span id="wk-a3" class="note-label">A</span></div>
+        <div class="key black" data-note="A#3"><span id="bk-a#3" class="note-label-black"></span></div>
+        <div class="key white" data-note="B3"><span id="wk-b3" class="note-label">B</span></div>
+        <div class="key white" data-note="C4"><span id="wk-c4" class="note-label">C</span></div>
+        <div class="key black" data-note="C#4"><span id="bk-c#4" class="note-label-black"></span></div>
+        <div class="key white" data-note="D4"><span id="wk-d4" class="note-label">D</span></div>
+        <div class="key black" data-note="D#4"><span id="bk-d#4" class="note-label-black"></span></div>
+        <div class="key white" data-note="E4"><span id="wk-e4" class="note-label">E</span></div>
+        <div class="key white" data-note="F4"><span id="wk-f4" class="note-label">F</span></div>
+        <div class="key black" data-note="F#4"><span id="bk-f#4" class="note-label-black"></span></div>
+        <div class="key white" data-note="G4"><span id="wk-g4" class="note-label">G</span></div>
+        <div class="key black" data-note="G#4"><span id="bk-g#4" class="note-label-black"></span></div>
+        <div class="key white" data-note="A4"><span id="wk-a4" class="note-label">A</span></div>
+        <div class="key black" data-note="A#4"><span id="bk-a#4" class="note-label-black"></span></div>
+        <div class="key white" data-note="B4"><span id="wk-b4" class="note-label">B</span></div>
+      </div>
+
+      <div class="chord-display-container"> 
+        <div id="chordDisplay" class="chord-display noChord"> Find chords just pressing some keys </div>
+
+        <div id="chordDisplayCopyButton" class="rptb-copy-container noChord" onmouseout="resetCopyButtonText()">
+          <button id="rptb-copy" class="rptb-buttons">
+            <div class="tooltip-copy-container">
+              <span id="tooltipCopy" class="tooltip-copy">Copy to clipboard</span>
+            </div>
+            <span class="material-icons">content_copy</span>
+          </button>
+        </div>
+
+      </div>
+
+      <div id="chordDisplayDetail" class="chord-display-detail"> </div>
+      <div id="chordDisplayDetailMatch" class="chord-display-detail-match"> </div>
+
+      <div class="cf-saved-chords-container">
+        <span id="materialSaveIcon" class="material-icons-outlined">book</span>
+          <div id="txtSavedChords" class="cf-savedChords-text">
+          Saved Chords:
+          </div>
+      </div>
+
+      <div id="savedChordsNoSpace" class="cf-saved-chords-nospace">
+        <span id="txtSavedChordsNoSpace"> There is no space to save it </span>
+      </div>
+
+      <div id="chordsSavedDiv" class="cf-chords-saved-list">
+
+        <div id="chordSaved1" class="cf-chord-saved">
+          <span id="chordSavedText1"> N/A </span>
+          <div class="delete-savedChord-container">
+            <button id="deleteSavedChordButton1" class="rptb-buttons deleteSavedChordButtons">
+              <span id="deleteSavedChordIcon1" class="material-icons-outlined deleteSavedChordIcons" >delete</span>
+            </button>
+          </div>
+        </div>
+
+        <div id="chordSaved2" class="cf-chord-saved">
+          <span id="chordSavedText2"> N/A </span>
+          <div class="delete-savedChord-container">
+            <button id="deleteSavedChordButton2" class="rptb-buttons deleteSavedChordButtons">
+              <span id="deleteSavedChordIcon2" class="material-icons-outlined deleteSavedChordIcons" >delete</span>
+            </button>
+          </div>
+        </div>
+
+        <div id="chordSaved3" class="cf-chord-saved">
+          <span id="chordSavedText3"> N/A </span>
+          <div class="delete-savedChord-container">
+            <button id="deleteSavedChordButton3" class="rptb-buttons deleteSavedChordButtons">
+              <span id="deleteSavedChordIcon3" class="material-icons-outlined deleteSavedChordIcons" >delete</span>
+            </button>
+          </div>
+        </div>
+
+        <div id="chordSaved4" class="cf-chord-saved">
+          <span id="chordSavedText4"> N/A </span>
+          <div class="delete-savedChord-container">
+            <button id="deleteSavedChordButton4" class="rptb-buttons deleteSavedChordButtons">
+              <span id="4eleteSavedChordIcon4" class="material-icons-outlined deleteSavedChordIcons" >delete</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="chordsSavedDiv" class="cf-chords-saved-list">
+
+        <div id="chordSaved5" class="cf-chord-saved">
+          <span id="chordSavedText5"> N/A </span>
+          <div class="delete-savedChord-container">
+            <button id="deleteSavedChordButton5" class="rptb-buttons deleteSavedChordButtons">
+              <span id="deleteSavedChordIcon5" class="material-icons-outlined deleteSavedChordIcons" >delete</span>
+            </button>
+          </div>
+        </div>
+
+        <div id="chordSaved6" class="cf-chord-saved">
+          <span id="chordSavedText6"> N/A </span>
+          <div class="delete-savedChord-container">
+            <button id="deleteSavedChordButton6" class="rptb-buttons deleteSavedChordButtons">
+              <span id="deleteSavedChordIcon6" class="material-icons-outlined deleteSavedChordIcons" >delete</span>
+            </button>
+          </div>
+        </div>
+
+        <div id="chordSaved7" class="cf-chord-saved">
+          <span id="chordSavedText7"> N/A </span>
+          <div class="delete-savedChord-container">
+            <button id="deleteSavedChordButton7" class="rptb-buttons deleteSavedChordButtons">
+              <span id="deleteSavedChordIcon7" class="material-icons-outlined deleteSavedChordIcons" >delete</span>
+            </button>
+          </div>
+        </div>
+
+        <div id="chordSaved8" class="cf-chord-saved">
+          <span id="chordSavedText8"> N/A </span>
+          <div class="delete-savedChord-container">
+            <button id="deleteSavedChordButton8" class="rptb-buttons deleteSavedChordButtons">
+              <span id="4eleteSavedChordIcon8" class="material-icons-outlined deleteSavedChordIcons" >delete</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="cf-bottomMessage">
+        <span id="txtBottomMessageBold" class="cf-bottomMessage-bold"> Note:</span>
+        <span id="txtBottomMessage"> More complex chords can vary depending on the musical context, and their choice within
+        a specific harmonic progression or melody can change their function and impact. </span>
+      </div>
+
+    </div> <!-- class "piano" -->
+  </div> <!-- class "container-main" -->
+
+  <div id="footer"></div>
+
+  <script>
+      Promise.all([
+          fetch('/_blocks/navbar.html').then(res => res.text()),
+          fetch('/_blocks/footer.html').then(res => res.text())
+      ])
+      .then(([navbarHtml, footerHtml]) => {
+          document.getElementById('navbar').innerHTML = navbarHtml;
+          document.getElementById('footer').innerHTML = footerHtml;
+      })
+      .then(() => {
+          // Esperar al siguiente ciclo del event loop para asegurar que el DOM esté actualizado
+          setTimeout(() => {
+              // Cargar scripts dinámicamente
+              const scripts = [
+                  "c8v6b4n2m0x.js",
+                  "fullChordList.js",
+                  "language.js",
+                  "/_global/mobile-general.js"
+              ];
+
+              function loadScriptsSequentially(scripts, index = 0) {
+                  if (index >= scripts.length) return;
+
+                  const script = document.createElement("script");
+                  script.src = scripts[index];
+                  script.defer = true; // Asegura que se ejecute después del DOM
+                  script.onload = () => loadScriptsSequentially(scripts, index + 1);
+                  script.onerror = () => console.error(`Error loading ${scripts[index]}`);
+                  document.body.appendChild(script);
+              }
+
+              loadScriptsSequentially(scripts);
+
+              // scripts.forEach(src => {
+              //     const script = document.createElement("script");
+              //     script.src = src;
+              //     script.defer = true; // Asegura que se ejecute después del DOM
+              //     document.body.appendChild(script);
+              // });
+
+              // Ejecutar funciones dependientes del DOM
+              function checkMenu() {
+                  const menuMain = document.getElementById("menuMain");
+                  const menuMainSmall = document.getElementById("menuMainSmall");
+
+                  if (!menuMain || !menuMainSmall) return; // Evitar errores si no existen
+
+                  menuMain.style.display = "flex";
+                  menuMainSmall.style.display = "none";
+
+                  if (menuMain.scrollHeight > menuMain.clientHeight) {
+                      menuMain.style.display = "none";
+                      menuMainSmall.style.display = "flex";
+                  }
+              }
+
+              window.addEventListener("load", checkMenu);
+              window.addEventListener("resize", checkMenu);
+          }, 0); // Esto asegura que el DOM esté listo
+
+          // Este timeout es para que el body aparezca cuando ya se haya cargado el navbar/footer
+          // y también se haya actualizado el idioma al que tenga el usuario
+          setTimeout(() => { 
+              document.body.style.visibility = 'visible';
+          }, 200);
+      });
+  </script>
+
+</body>
+</html>
