@@ -780,7 +780,7 @@ select {
 }
 
 /* iPad */
-@media (orientation: portrait) and (pointer: coarse) {
+@media (min-width: 767px) and (orientation: portrait) and (pointer: coarse) {
   /* Estilos específicos para iPads y Tablets */
   
   .container-main-right {
