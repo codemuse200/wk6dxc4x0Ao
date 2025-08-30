@@ -297,6 +297,28 @@ body {
   display: none;
 }
 
+/* iPad */
+@media (orientation: portrait) and (pointer: coarse) {
+  /* Estilos específicos para iPads y Tablets */
+  
+  .key.o0,
+  .key.o1,
+  .key.o7,
+  .key.o8 {
+    display: none;
+  }
+
+  .key.white {
+    flex: 0 0 calc(100% / 35); /* ancho exacto dividido por 52-17 */
+  }
+
+  .key.black {
+    width: calc(100%/70);
+    margin-left: calc((100%/70)*-0.5);
+    margin-right: calc((100%/70)*-0.5);
+  }
+}
+
 /* Responsivo para móviles */
 @media (max-width: 767px) {
   html, body {
@@ -426,27 +448,5 @@ body {
 @media (pointer: fine) {
   .rotate-device-container {
     display: none;
-  }
-}
-
-/* iPad */
-@media (orientation: portrait) and (pointer: coarse) {
-  /* Estilos específicos para iPads y Tablets */
-  
-  .key.o0,
-  .key.o1,
-  .key.o7,
-  .key.o8 {
-    display: none;
-  }
-
-  .key.white {
-    flex: 0 0 calc(100% / 35); /* ancho exacto dividido por 52-17 */
-  }
-
-  .key.black {
-    width: calc(100%/70);
-    margin-left: calc((100%/70)*-0.5);
-    margin-right: calc((100%/70)*-0.5);
   }
 }
